@@ -70,7 +70,7 @@
 
 header.masthead {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
   background: linear-gradient(0deg,#ff6a00,#ee0979);
