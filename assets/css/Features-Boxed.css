@@ -80,3 +80,8 @@ header.masthead {
   background-size: cover;
 }
 
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
