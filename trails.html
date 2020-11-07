@@ -65,6 +65,25 @@
     </nav>
     <div id="content">
       <div class="mt-5 container">
+        <div class="d-flex justify-content-between mb-2">
+          <a href="index.html"
+            ><span
+              ><i class="fas fa-backspace mr-2 fa-lg" style="color: #7d8285"></i
+              >Back</span
+            ></a
+          >
+          <div class="ml-auto">
+            <span style="cursor: pointer" id="list-view-btn"
+              >List view<i
+                class="fas fa-grip-lines-vertical ml-2 mr-3"
+                style="color: #7d8285"
+              ></i
+            ></span>
+            <span style="cursor: pointer" id="grid-view-btn"
+              >Grid view<i class="fas fa-th ml-2" style="color: #7d8285"></i
+            ></span>
+          </div>
+        </div>
         <h5 class="text-center text-dark">
           <strong
             >Found 5 trails within 10 miles of Oregon State University</strong
@@ -152,7 +171,7 @@
           >
         </div>
         <hr />
-        <div class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center" id="trails">
           <div class="card w-50 my-3">
             <div class="card-body">
               <div class="d-flex justify-content-between">
@@ -179,7 +198,7 @@
               <div class="d-flex justify-content-between card-text pt-3">
                 <span
                   ><i class="fas fa-map mr-2" style="color: #7d8285"></i
-                  >Trailhead location: lat - 32.312, long - 19.231</span
+                  >Trailhead: lat - 32.312, long - 19.231</span
                 >
               </div>
               <div class="d-flex justify-content-between card-text pt-3">
@@ -222,7 +241,7 @@
               <div class="d-flex justify-content-between card-text pt-3">
                 <span
                   ><i class="fas fa-map mr-2" style="color: #7d8285"></i
-                  >Trailhead location: lat - 32.312, long - 19.231</span
+                  >Trailhead: lat - 32.312, long - 19.231</span
                 >
               </div>
               <div class="d-flex justify-content-between card-text pt-3">
@@ -265,7 +284,7 @@
               <div class="d-flex justify-content-between card-text pt-3">
                 <span
                   ><i class="fas fa-map mr-2" style="color: #7d8285"></i
-                  >Trailhead location: lat - 32.312, long - 19.231</span
+                  >Trailhead: lat - 32.312, long - 19.231</span
                 >
               </div>
               <div class="d-flex justify-content-between card-text pt-3">
@@ -308,7 +327,7 @@
               <div class="d-flex justify-content-between card-text pt-3">
                 <span
                   ><i class="fas fa-map mr-2" style="color: #7d8285"></i
-                  >Trailhead location: lat - 32.312, long - 19.231</span
+                  >Trailhead: lat - 32.312, long - 19.231</span
                 >
               </div>
               <div class="d-flex justify-content-between card-text pt-3">
@@ -351,7 +370,7 @@
               <div class="d-flex justify-content-between card-text pt-3">
                 <span
                   ><i class="fas fa-map mr-2" style="color: #7d8285"></i
-                  >Trailhead location: lat - 32.312, long - 19.231</span
+                  >Trailhead: lat - 32.312, long - 19.231</span
                 >
               </div>
               <div class="d-flex justify-content-between card-text pt-3">
@@ -375,5 +394,6 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
+    <script src="assets/js/trails.js"></script>
   </body>
 </html>
