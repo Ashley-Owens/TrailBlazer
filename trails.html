@@ -1,100 +1,379 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>TrailBlazer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Bitter:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
+    />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css" />
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css" />
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css" />
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css" />
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TrailBlazerRL</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom" id="navbar">
-        <div class="container"><a class="navbar-brand" href="#">TrailBlazer</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive-1"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="search.html">Search</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                </ul>
-            </div>
+  <body>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom"
+      id="navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">TrailBlazer</a
+        ><button
+          data-toggle="collapse"
+          class="navbar-toggler"
+          data-target="#navbarResponsive-1"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive-1">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="search.html">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <div id="content">
-        <div class="mt-5 container">
-            <h5 class="text-center text-dark"><strong>Found 5 trails within 10 miles of Oregon State University</strong><br></h5>
-            <div class="text-center"><small>Looking for personalized trails? Display trails&nbsp;<a id="myModal" href="#">just for you<div class="modal fade" role="dialog" tabindex="-1" id="myModal"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h3 class="modal-title" style="color: #ff6a00;">Fitness Matching</h3><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div><div class="modal-body"><h5 style="text-align: center;">Select desired effort level to tailor your trail search.</h5><div class="form-check" style="text-align: left;"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: #ff6a00;">Easy and Chill</label></div><div class="form-check" style="text-align: left;color: #ff6a00;"><input class="form-check-input" type="checkbox" id="formCheck-3" checked="checked"><label class="form-check-label" for="formCheck-1">Best Match</label></div><div class="form-check" style="text-align: left;"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: #ff6a00;">Challenge Me</label></div></div><div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div></div></div></div></a></small></div>
-            <hr>
-            <div class="d-flex flex-column align-items-center">
-                <div class="card w-50 my-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="text-left text-black-50" style="color: #7d8285;">Marina Trail</h5>
-                            <div class="d-flex card-text"><i class="material-icons" style="color: #7d8285;border-color: #ff6a00;">location_on</i><span class="text-black-50" style="color: #ff6a00;">3.7 miles</span></div>
-                        </div><span class="badge badge-success mt-2">Easy</span>
-                        <div class="card-text pt-3"><span><i class="fas fa-road mr-2" style="color: #7d8285;"></i>Trail length: 1.5 miles</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-map mr-2" style="color: #7d8285;"></i>Trailhead location: lat - 32.312, long - 19.231</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-tshirt mr-2" style="color: #7d8285;"></i><a href="#">Gear &amp; clothing</a></span></div><button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">Navigate to the trailhead</button></div>
+      <div class="mt-5 container">
+        <h5 class="text-center text-dark">
+          <strong
+            >Found 5 trails within 10 miles of Oregon State University</strong
+          ><br />
+        </h5>
+        <div class="text-center">
+          <small
+            >Looking for personalized trails? Display trails&nbsp;<a
+              id="myModal"
+              href="#"
+              >just for you
+              <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title" style="color: #ff6a00">
+                        Fitness Matching
+                      </h3>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h5 style="text-align: center">
+                        Select desired effort level to tailor your trail search.
+                      </h5>
+                      <div class="form-check" style="text-align: left">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="formCheck-1"
+                        /><label
+                          class="form-check-label"
+                          for="formCheck-1"
+                          style="color: #ff6a00"
+                          >Easy and Chill</label
+                        >
+                      </div>
+                      <div
+                        class="form-check"
+                        style="text-align: left; color: #ff6a00"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="formCheck-3"
+                          checked="checked"
+                        /><label class="form-check-label" for="formCheck-1"
+                          >Best Match</label
+                        >
+                      </div>
+                      <div class="form-check" style="text-align: left">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="formCheck-2"
+                        /><label
+                          class="form-check-label"
+                          for="formCheck-1"
+                          style="color: #ff6a00"
+                          >Challenge Me</label
+                        >
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        class="btn btn-light"
+                        type="button"
+                        data-dismiss="modal"
+                      >
+                        Close</button
+                      ><button class="btn btn-primary" type="button">
+                        Save
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div class="card w-50 my-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="text-left text-black-50" style="color: #7d8285;">CS 325 HW Trail</h5>
-                            <div class="d-flex card-text"><i class="material-icons" style="color: #7d8285;border-color: #ff6a00;">location_on</i><span class="text-black-50" style="color: #ff6a00;">4.7 miles</span></div>
-                        </div><span class="badge badge-warning mt-2">Medium</span>
-                        <div class="card-text pt-3"><span><i class="fas fa-road mr-2" style="color: #7d8285;"></i>Trail length: 8.1 miles</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-map mr-2" style="color: #7d8285;"></i>Trailhead location: lat - 32.312, long - 19.231</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-tshirt mr-2" style="color: #7d8285;"></i><a href="#">Gear &amp; clothing</a></span></div><button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">Navigate to the trailhead</button></div>
-                </div>
-                <div class="card w-50 my-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="text-left text-black-50" style="color: #7d8285;">Mount Diablo Trail</h5>
-                            <div class="d-flex card-text"><i class="material-icons" style="color: #7d8285;border-color: #ff6a00;">location_on</i><span class="text-black-50" style="color: #ff6a00;">6.2 miles</span></div>
-                        </div><span class="badge badge-success mt-2">Easy</span>
-                        <div class="card-text pt-3"><span><i class="fas fa-road mr-2" style="color: #7d8285;"></i>Trail length: 2.9 miles</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-map mr-2" style="color: #7d8285;"></i>Trailhead location: lat - 32.312, long - 19.231</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-tshirt mr-2" style="color: #7d8285;"></i><a href="#">Gear &amp; clothing</a></span></div><button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">Navigate to the trailhead</button></div>
-                </div>
-                <div class="card w-50 my-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="text-left text-black-50" style="color: #7d8285;">Another Trail</h5>
-                            <div class="d-flex card-text"><i class="material-icons" style="color: #7d8285;border-color: #ff6a00;">location_on</i><span class="text-black-50" style="color: #ff6a00;">8.7 miles</span></div>
-                        </div><span class="badge badge-warning mt-2">Medium</span>
-                        <div class="card-text pt-3"><span><i class="fas fa-road mr-2" style="color: #7d8285;"></i>Trail length: 8.1 miles</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-map mr-2" style="color: #7d8285;"></i>Trailhead location: lat - 32.312, long - 19.231</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-tshirt mr-2" style="color: #7d8285;"></i><a href="#">Gear &amp; clothing</a></span></div><button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">Navigate to the trailhead</button></div>
-                </div>
-                <div class="card w-50 my-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="text-left text-black-50" style="color: #7d8285;">Some Trail</h5>
-                            <div class="d-flex card-text"><i class="material-icons" style="color: #7d8285;border-color: #ff6a00;">location_on</i><span class="text-black-50" style="color: #ff6a00;">9.9 miles</span></div>
-                        </div><span class="badge badge-danger mt-2">Hard</span>
-                        <div class="card-text pt-3"><span><i class="fas fa-road mr-2" style="color: #7d8285;"></i>Trail length: 12 miles</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-map mr-2" style="color: #7d8285;"></i>Trailhead location: lat - 32.312, long - 19.231</span></div>
-                        <div class="d-flex justify-content-between card-text pt-3"><span><i class="fas fa-tshirt mr-2" style="color: #7d8285;"></i><a href="#">Gear &amp; clothing</a></span></div><button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">Navigate to the trailhead</button></div>
-                </div>
-            </div>
+              </div></a
+            ></small
+          >
         </div>
+        <hr />
+        <div class="d-flex flex-column align-items-center">
+          <div class="card w-50 my-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="text-left text-black-50" style="color: #7d8285">
+                  Marina Trail
+                </h5>
+                <div class="d-flex card-text">
+                  <i
+                    class="material-icons"
+                    style="color: #7d8285; border-color: #ff6a00"
+                    >location_on</i
+                  ><span class="text-black-50" style="color: #ff6a00"
+                    >3.7 miles</span
+                  >
+                </div>
+              </div>
+              <span class="badge badge-success mt-2">Easy</span>
+              <div class="card-text pt-3">
+                <span
+                  ><i class="fas fa-road mr-2" style="color: #7d8285"></i>Trail
+                  length: 1.5 miles</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-map mr-2" style="color: #7d8285"></i
+                  >Trailhead location: lat - 32.312, long - 19.231</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-tshirt mr-2" style="color: #7d8285"></i
+                  ><a href="gear.html">Gear &amp; clothing</a></span
+                >
+              </div>
+              <button
+                class="btn btn-outline-primary btn-sm mt-4 w-100"
+                type="button"
+              >
+                Navigate to the trailhead
+              </button>
+            </div>
+          </div>
+          <div class="card w-50 my-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="text-left text-black-50" style="color: #7d8285">
+                  CS 325 HW Trail
+                </h5>
+                <div class="d-flex card-text">
+                  <i
+                    class="material-icons"
+                    style="color: #7d8285; border-color: #ff6a00"
+                    >location_on</i
+                  ><span class="text-black-50" style="color: #ff6a00"
+                    >4.7 miles</span
+                  >
+                </div>
+              </div>
+              <span class="badge badge-warning mt-2">Medium</span>
+              <div class="card-text pt-3">
+                <span
+                  ><i class="fas fa-road mr-2" style="color: #7d8285"></i>Trail
+                  length: 8.1 miles</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-map mr-2" style="color: #7d8285"></i
+                  >Trailhead location: lat - 32.312, long - 19.231</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-tshirt mr-2" style="color: #7d8285"></i
+                  ><a href="gear.html">Gear &amp; clothing</a></span
+                >
+              </div>
+              <button
+                class="btn btn-outline-primary btn-sm mt-4 w-100"
+                type="button"
+              >
+                Navigate to the trailhead
+              </button>
+            </div>
+          </div>
+          <div class="card w-50 my-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="text-left text-black-50" style="color: #7d8285">
+                  Mount Diablo Trail
+                </h5>
+                <div class="d-flex card-text">
+                  <i
+                    class="material-icons"
+                    style="color: #7d8285; border-color: #ff6a00"
+                    >location_on</i
+                  ><span class="text-black-50" style="color: #ff6a00"
+                    >6.2 miles</span
+                  >
+                </div>
+              </div>
+              <span class="badge badge-success mt-2">Easy</span>
+              <div class="card-text pt-3">
+                <span
+                  ><i class="fas fa-road mr-2" style="color: #7d8285"></i>Trail
+                  length: 2.9 miles</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-map mr-2" style="color: #7d8285"></i
+                  >Trailhead location: lat - 32.312, long - 19.231</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-tshirt mr-2" style="color: #7d8285"></i
+                  ><a href="gear.html">Gear &amp; clothing</a></span
+                >
+              </div>
+              <button
+                class="btn btn-outline-primary btn-sm mt-4 w-100"
+                type="button"
+              >
+                Navigate to the trailhead
+              </button>
+            </div>
+          </div>
+          <div class="card w-50 my-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="text-left text-black-50" style="color: #7d8285">
+                  Another Trail
+                </h5>
+                <div class="d-flex card-text">
+                  <i
+                    class="material-icons"
+                    style="color: #7d8285; border-color: #ff6a00"
+                    >location_on</i
+                  ><span class="text-black-50" style="color: #ff6a00"
+                    >8.7 miles</span
+                  >
+                </div>
+              </div>
+              <span class="badge badge-warning mt-2">Medium</span>
+              <div class="card-text pt-3">
+                <span
+                  ><i class="fas fa-road mr-2" style="color: #7d8285"></i>Trail
+                  length: 8.1 miles</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-map mr-2" style="color: #7d8285"></i
+                  >Trailhead location: lat - 32.312, long - 19.231</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-tshirt mr-2" style="color: #7d8285"></i
+                  ><a href="gear.html">Gear &amp; clothing</a></span
+                >
+              </div>
+              <button
+                class="btn btn-outline-primary btn-sm mt-4 w-100"
+                type="button"
+              >
+                Navigate to the trailhead
+              </button>
+            </div>
+          </div>
+          <div class="card w-50 my-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="text-left text-black-50" style="color: #7d8285">
+                  Some Trail
+                </h5>
+                <div class="d-flex card-text">
+                  <i
+                    class="material-icons"
+                    style="color: #7d8285; border-color: #ff6a00"
+                    >location_on</i
+                  ><span class="text-black-50" style="color: #ff6a00"
+                    >9.9 miles</span
+                  >
+                </div>
+              </div>
+              <span class="badge badge-danger mt-2">Hard</span>
+              <div class="card-text pt-3">
+                <span
+                  ><i class="fas fa-road mr-2" style="color: #7d8285"></i>Trail
+                  length: 12 miles</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-map mr-2" style="color: #7d8285"></i
+                  >Trailhead location: lat - 32.312, long - 19.231</span
+                >
+              </div>
+              <div class="d-flex justify-content-between card-text pt-3">
+                <span
+                  ><i class="fas fa-tshirt mr-2" style="color: #7d8285"></i
+                  ><a href="gear.html">Gear &amp; clothing</a></span
+                >
+              </div>
+              <button
+                class="btn btn-outline-primary btn-sm mt-4 w-100"
+                type="button"
+              >
+                Navigate to the trailhead
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
-</body>
-
+  </body>
 </html>

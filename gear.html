@@ -16,33 +16,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Bitter:400,700"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
-    />
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css" />
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css" />
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css" />
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css" />
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css" />
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css" />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css" />
+    <link rel="stylesheet" href="assets/css/Social-Icons.css" />
   </head>
 
   <body>
@@ -102,51 +79,50 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-          <h1 class="masthead-heading mb-0">Blaze a Trail!</h1>
-          <h2 class="masthead-subheading mb-0">Find nearby hiking trails</h2>
-          <div class="d-flex justify-content-center mt-5">
-            <div id="geocoder" class="geocoder"></div>
-            <a href="trails.html"
-              ><button class="btn btn-primary">Search</button></a
-            >
-          </div>
-
-          <script>
-            mapboxgl.accessToken =
-              "pk.eyJ1Ijoicm9ubnlsaXU5NSIsImEiOiJja2d6cjlpYW4wbnV2MnlrMHRsMXU2OHdrIn0.QAx2Y__03yIAmx7tuCSyDQ";
-
-            var geocoder = new MapboxGeocoder({
-              accessToken: mapboxgl.accessToken,
-              mapboxgl: mapboxgl,
-              placeholder: "Enter an address",
-            });
-
-            geocoder.addTo("#geocoder");
-          </script>
+          <h1 class="masthead-heading mb-0">
+            Mt. Baldy Devil's Backbone Trail
+          </h1>
+          <h2 class="masthead-subheading mb-0">Gear Recommendations</h2>
         </div>
       </div>
     </header>
     <section>
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img
-                class="rounded-circle img-fluid"
-                src="assets/img/P1020634%20copy.jpg"
-                style="padding: 0; height: 325; width: 325 !important"
-              />
-            </div>
-          </div>
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
-              <h2 class="display-4">Search trails</h2>
-              <p>
-                Using your current location, we'll find nearby trails matching
-                your search criteria. Once you choose a trail, simply click the
-                navigation button to open your native map app for driving
-                directions.
-              </p>
+              <h2 class="display-5">
+                Weather Conditions:&nbsp;&nbsp;&nbsp;<i
+                  class="typcn typcn-weather-sunny"
+                ></i>
+                76°&nbsp;&nbsp;<i class="typcn typcn-weather-windy-cloudy"></i
+                >&nbsp;4 mph
+              </h2>
+              <p></p>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Gear</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr></tr>
+                    <tr>
+                      <td>Light-weight jacket shell</td>
+                    </tr>
+                    <tr>
+                      <td>Hat / Cap</td>
+                    </tr>
+                    <tr>
+                      <td>Sunglasses</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -156,22 +132,36 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <img
-                class="rounded-circle img-fluid"
-                src="assets/img/merrill.jpg"
-              />
-            </div>
+            <div class="p-6"></div>
           </div>
           <div class="col-lg-6 order-lg-2">
             <div class="p-5">
-              <h2 class="display-4">Fitness Matching</h2>
-              <p>
-                Our proprietary trail matching feature refines your search to
-                include only&nbsp;those trails matching your desired effort
-                level. Be sure to complete your user profile to enable this
-                functionality.
-              </p>
+              <h2 class="display-5">
+                Terrain:&nbsp;<i class="fas fa-mountain"></i>&nbsp;2,350
+                ft&nbsp;&nbsp;&nbsp;<i class="fas fa-walking"></i>&nbsp;Rocky
+              </h2>
+              <p></p>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Gear</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hiking Shoes</td>
+                    </tr>
+                    <tr>
+                      <td>Hiking Pants</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                      <td>Small First Aid Kit</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -181,35 +171,61 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img
-                class="rounded-circle img-fluid"
-                src="assets/img/1014_hikesgear_kburdg_oneuseonly.jpg"
-              />
-            </div>
+            <div class="p-6"></div>
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
-              <h2 class="display-4">Gear Recommendations</h2>
-              <p>
-                Select a trail to learn about trail-specific gear suggestions
-                and current weather conditions.
-              </p>
+              <h2 class="display-5">
+                Estimated Time:&nbsp;&nbsp;<i class="fas fa-map-signs"></i
+                >&nbsp;3.3 miles&nbsp;&nbsp;<i class="far fa-clock"></i>&nbsp;4
+                hours
+              </h2>
+              <p></p>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Gear</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2 Liters of Water</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                      <td>Trail Mix</td>
+                    </tr>
+                    <tr>
+                      <td>Sun Block</td>
+                    </tr>
+                    <tr>
+                      <td>Phone Charger</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="social-icons">
+      <a href="#"><i class="icon ion-social-twitter"></i></a
+      ><a href="#"><i class="icon ion-social-facebook"></i></a
+      ><a href="#"><i class="icon ion-android-share-alt"></i></a
+      ><a href="#"><i class="icon ion-social-instagram-outline"></i></a>
+    </div>
     <footer class="py-5 bg-black">
       <div class="container">
         <p class="text-center text-white m-0 small">
           Copyright&nbsp;© TrailBlazer 2020
         </p>
       </div>
+      <p class="text-center text-white m-0 small"></p>
+      <p class="text-center text-white m-0 small"></p>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/Profile-Edit-Form.js"></script>
   </body>
 </html>
