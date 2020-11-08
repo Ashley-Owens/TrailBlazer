@@ -91,84 +91,94 @@
         </h5>
         <div class="text-center">
           <small>Looking for personalized trails?</small>
-              
-          <!-- Button opens Modal -->
+        </div><br/>
+        
+        <!-- Button opens Modal -->
+        <div class="text-center">
           <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Match Me</button>
+        </div>     
+                <!-- Modal -->
+          <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" style="color: #ff6a00">
+                    Fitness Matching
+                  </h4>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p style="text-align: left">
+                    Please select desired effort level to tailor your trail search.
+                  </p>
+                  <div class="form-check" style="text-align: left">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="modalRadio"
+                      id="formCheck-1"
+                    /><label
+                      class="form-check-label"
+                      for="formCheck-1"
+                      style="color: #fd8a38"
+                      >Easy and Chill</label>
+                  </div>
 
-              <!-- Modal -->
-              <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="modal-title" style="color: #ff6a00">
-                        Fitness Matching
-                      </h3>
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <h5 style="text-align: center">
-                        Select desired effort level to tailor your trail search.
-                      </h5>
-                      <div class="form-check" style="text-align: left">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="formCheck-1"
-                        /><label
-                          class="form-check-label"
-                          for="formCheck-1"
-                          style="color: #ff6a00"
-                          >Easy and Chill</label
-                        >
-                      </div>
-                      <div
-                        class="form-check"
-                        style="text-align: left; color: #ff6a00"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="formCheck-3"
-                          checked="checked"
-                        /><label class="form-check-label" for="formCheck-1"
-                          >Best Match</label
-                        >
-                      </div>
-                      <div class="form-check" style="text-align: left">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="formCheck-2"
-                        /><label
-                          class="form-check-label"
-                          for="formCheck-1"
-                          style="color: #ff6a00"
-                          >Challenge Me</label
-                        >
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        class="btn btn-light"
-                        type="button"
-                        data-dismiss="modal"
-                      >
-                        Close</button
-                      ><button class="btn btn-primary" type="button">
-                        Save
-                      </button>
-                    </div>
+                  <div class="form-check" style="text-align: left">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="modalRadio"
+                      id="formCheck-2"
+                    /><label 
+                      class="form-check-label" 
+                      for="formCheck-2" 
+                      style="color: #fd8a38"
+                      >Best Match</label>
+                  </div>
+
+                  <div class="form-check" style="text-align: left">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="modalRadio"
+                      id="formCheck-3"
+                    /><label
+                      class="form-check-label"
+                      for="formCheck-3"
+                      style="color: #fd8a38"
+                      >Challenge Me</label>
                   </div>
                 </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  
+                  <div class="col-sm">
+                  <!-- Toggle switch -->
+                  <div class="custom-control custom-switch" style="font-size: small">
+                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                    <label class="custom-control-label" for="customSwitches">Enable fitness matching</label>
+                  </div>
+                  </div>
+                  <button
+                    class="btn btn-light"
+                    type="button"
+                    data-dismiss="modal">
+                    Close</button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
               </div>
-        </div>
+            </div>
+          </div>
+        
         <hr />
         <div class="d-flex flex-column align-items-center" id="trails">
           <div class="card w-50 my-3">
