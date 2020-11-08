@@ -86,7 +86,3 @@ header.masthead {
   display:inline-block;
 }
 
-.modal:target {
-  visibility: visible;
-  z-index: 100;
-}
