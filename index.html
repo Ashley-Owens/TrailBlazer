@@ -106,23 +106,9 @@
           <h2 class="masthead-subheading mb-0">Find nearby hiking trails</h2>
           <div class="d-flex justify-content-center mt-5">
             <div id="geocoder" class="geocoder"></div>
-            <a href="trails.html"
-              ><button class="btn btn-primary">Search</button></a
-            >
+            <button class="btn btn-primary" id="search-btn">Search</button>
           </div>
-
-          <script>
-            mapboxgl.accessToken =
-              "pk.eyJ1Ijoicm9ubnlsaXU5NSIsImEiOiJja2d6cjlpYW4wbnV2MnlrMHRsMXU2OHdrIn0.QAx2Y__03yIAmx7tuCSyDQ";
-
-            var geocoder = new MapboxGeocoder({
-              accessToken: mapboxgl.accessToken,
-              mapboxgl: mapboxgl,
-              placeholder: "Enter an address",
-            });
-
-            geocoder.addTo("#geocoder");
-          </script>
+          <script src="assets/js/geocoder.js"></script>
         </div>
       </div>
     </header>
@@ -209,7 +195,6 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
   </body>
 </html>
