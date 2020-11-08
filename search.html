@@ -73,7 +73,7 @@
         </h1>
         <div class="d-flex justify-content-center mt-5">
           <div id="geocoder" class="geocoder"></div>
-          <a href="trails.html"><button class="btn btn-primary">Go</button></a>
+          <button class="btn btn-primary" id="search-btn">Go</button>
         </div>
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
         <link
@@ -81,19 +81,7 @@
           href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
           type="text/css"
         />
-
-        <script>
-          mapboxgl.accessToken =
-            "pk.eyJ1Ijoicm9ubnlsaXU5NSIsImEiOiJja2d6cjlpYW4wbnV2MnlrMHRsMXU2OHdrIn0.QAx2Y__03yIAmx7tuCSyDQ";
-
-          var geocoder = new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl,
-            placeholder: "Enter an address",
-          });
-
-          geocoder.addTo("#geocoder");
-        </script>
+        <script src="assets/js/geocoder.js"></script>
       </div>
     </div>
     <footer class="py-5 bg-dark">
