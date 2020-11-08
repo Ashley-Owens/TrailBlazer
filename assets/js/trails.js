@@ -133,9 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         </span>
                     </div>`);
 
-    const navigation = $(`<button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">
-                            Navigate to the trailhead
-                          </button>`);
+    const navigation = $(`<a href="navigation.html">
+                            <button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">
+                              Navigate to the trailhead
+                            </button>
+                          </a>`);
 
     cardTitle.append([name, distance]);
     cardBody.append([
@@ -204,11 +206,13 @@ document.addEventListener("DOMContentLoaded", () => {
                           </span>
                       </div>`);
 
-    const navigation = $(`<button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">
-                                <span style="font-size: 0.9rem">
-                                    Navigate to the trailhead
-                                </span>
-                            </button>`);
+    const navigation = $(`<a href="navigation.html">
+                            <button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">
+                              <span style="font-size: 0.9rem">
+                                 Navigate to the trailhead
+                              </span>
+                            </button>
+                          </a>`);
 
     cardBody.append([
       name,
@@ -226,4 +230,3 @@ document.addEventListener("DOMContentLoaded", () => {
     return card;
   };
 });
-
