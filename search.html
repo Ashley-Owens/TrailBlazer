@@ -73,9 +73,89 @@
         </h1>
         <div class="d-flex justify-content-center mt-5">
           <div id="geocoder" class="geocoder"></div>
+
+          <!-- Go Button -->
           <a href="trails.html"><button class="btn btn-primary">Go</button></a>
           <div class="divider"></div>
-          <button class="btn btn-primary">Filter</button>
+
+          <!-- Button opens Modal -->
+          <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter</button>
+
+          <!-- Modal -->
+          <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" style="color: #ff6a00">
+                    Fitness Matching
+                  </h3>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5 style="text-align: center">
+                    Select desired effort level to tailor your trail search.
+                  </h5>
+                  <div class="form-check" style="text-align: left">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="formCheck-1"
+                    /><label
+                      class="form-check-label"
+                      for="formCheck-1"
+                      style="color: #ff6a00"
+                      >Easy and Chill</label
+                    >
+                  </div>
+                  <div
+                    class="form-check"
+                    style="text-align: left; color: #ff6a00"
+                  >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="formCheck-3"
+                      checked="checked"
+                    /><label class="form-check-label" for="formCheck-1"
+                      >Best Match</label
+                    >
+                  </div>
+                  <div class="form-check" style="text-align: left">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="formCheck-2"
+                    /><label
+                      class="form-check-label"
+                      for="formCheck-1"
+                      style="color: #ff6a00"
+                      >Challenge Me</label
+                    >
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    class="btn btn-light"
+                    type="button"
+                    data-dismiss="modal"
+                  >
+                    Close</button
+                  ><button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div></a
+        ></small>
+    </div>
           
         </div>
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
