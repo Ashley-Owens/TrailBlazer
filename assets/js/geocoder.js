@@ -1,4 +1,4 @@
-(function addGeocoder() {
+(function () {
   document.addEventListener("DOMContentLoaded", () => {
     mapboxgl.accessToken =
       "pk.eyJ1Ijoicm9ubnlsaXU5NSIsImEiOiJja2d6cjlpYW4wbnV2MnlrMHRsMXU2OHdrIn0.QAx2Y__03yIAmx7tuCSyDQ";
