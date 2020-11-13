@@ -51,13 +51,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive-1">
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="search.html">Search</a>
+              <a class="nav-link" href="search.html">Search</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="profile.html">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
           </ul>
         </div>
@@ -97,114 +97,123 @@
               <div class="form-row">
                 <div class="col-sm-12 col-md-6">
                   <div class="form-group">
-                    <label>First Name </label
-                    ><input class="form-control" type="text" name="firstname" />
+                    <label>Name</label
+                    ><input
+                      class="form-control profile-input"
+                      type="text"
+                      name="name"
+                      autocomplete="off"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <div class="form-group">
-                    <label>Age&nbsp;</label
+                    <label>Age</label
                     ><input
-                      class="form-control"
+                      class="form-control profile-input"
                       type="number"
-                      name="lastname"
+                      name="age"
+                      min="0"
+                      max="150"
+                      required
                     />
                   </div>
                 </div>
               </div>
-              <div class="form-row">
+              <div class="form-row mt-3">
                 <div class="col col-sm-12 col-md-6" style="padding-bottom: 15">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-primary dropdown-toggle"
-                      data-toggle="dropdown"
-                      aria-expanded="false"
-                      id="Activity-Level"
-                      type="button"
-                      style="background: #ff6a00"
-                    >
-                      Activity Level&nbsp;
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Extremely Inactive</a
-                      ><a class="dropdown-item" href="#">Sedentary</a
-                      ><a class="dropdown-item" href="#">Moderately Active</a
-                      ><a class="dropdown-item" href="#">Vigorously Active</a
-                      ><a class="dropdown-item" href="#">Extremely Active</a>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="button">
+                        Activity Level
+                      </button>
                     </div>
+                    <select
+                      class="custom-select profile-input"
+                      id="inputGroupSelect01"
+                      name="activityLevel"
+                      required
+                    >
+                      <option value="Extremely Active">Extremely Active</option>
+                      <option value="Vigorously Active">
+                        Vigorously Active
+                      </option>
+                      <option value="Moderately Active">
+                        Moderately Active
+                      </option>
+                      <option value="Sedentary">Sedentary</option>
+                      <option value="Extremely Inactive">
+                        Extremely Inactive
+                      </option>
+                    </select>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-primary dropdown-toggle"
-                      data-toggle="dropdown"
-                      aria-expanded="false"
-                      type="button"
-                      style="background: #ff6a00"
-                    >
-                      Gender&nbsp;
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Female</a
-                      ><a class="dropdown-item" href="#">Male</a
-                      ><a class="dropdown-item" href="#">Non-binary</a>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="button">
+                        Gender
+                      </button>
                     </div>
+                    <select
+                      class="custom-select profile-input"
+                      id="inputGroupSelect01"
+                      name="gender"
+                      required
+                    >
+                      <option value="Female">Female</option>
+                      <option value="Male">Male</option>
+                      <option value="Non-Binary">Non-Binary</option>
+                    </select>
                   </div>
                 </div>
               </div>
-              <div class="form-row">
-                <div class="col-sm-12 col-md-6">
-                  <div class="form-group">
-                    <label>&nbsp;</label
-                    ><input
-                      class="form-control"
-                      type="password"
-                      name="password"
-                      autocomplete="off"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                  <div class="form-group">
-                    <label></label
-                    ><input
-                      class="form-control"
-                      type="password"
-                      name="confirmpass"
-                      autocomplete="off"
-                      required=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="form-row">
+              <div class="form-row mt-3">
                 <div class="col-md-12 content-right">
                   <button
                     class="btn btn-primary rounded-pill form-btn"
                     type="submit"
                     style="background: #ff6a00"
+                    id="calculate-btn"
                   >
-                    SAVE</button
+                    Calculate</button
                   ><button
                     class="btn btn-danger rounded-pill form-btn"
                     type="reset"
                     style="background: #ee0979"
+                    id="reset-btn"
                   >
-                    CANCEL
+                    Reset
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </form>
+        <div class="row">
+          <div class="col-md-8 ml-auto mt-3">
+            <h3>Fitness Level</h3>
+            <hr />
+            <div>
+              <i class="fas fa-heartbeat mr-2 fa-lg text-primary"></i>
+              <span id="fitness-level"></span>
+            </div>
+            <div class="mt-3 bg-light p-3 rounded border">
+              <span
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem ab odio dolore asperiores dolor excepturi
+                adipisci cupiditate quos ratione officiis.</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
+    <script src="assets/js/profile.js"></script>
   </body>
 </html>
