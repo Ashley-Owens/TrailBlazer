@@ -74,98 +74,115 @@
         </div>
       </div>
 
-      <div class="d-none content" id="results">
-        <div class="mt-5 container" id="results-container">
-          <div class="d-flex justify-content-between mb-2">
-            <a href="index.html"
-              ><span
-                ><i
-                  class="fas fa-backspace mr-2 fa-lg"
-                  style="color: #7d8285"
-                ></i
-                >Back</span
-              ></a
-            >
-            <div class="ml-auto">
-              <span style="cursor: pointer" id="list-view-btn"
-                >List view<i
-                  class="fas fa-grip-lines-vertical ml-2 mr-3"
-                  style="color: #7d8285"
-                ></i
-              ></span>
-              <span style="cursor: pointer" id="grid-view-btn"
-                >Grid view<i class="fas fa-th ml-2" style="color: #7d8285"></i
-              ></span>
+
+
+        <!-- Button opens Modal -->
+        <div class="text-center">
+          <button
+            class="btn btn-primary btn-sm"
+            data-toggle="modal"
+            data-target="#myModal">
+            Just for you
+          </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" style="color: #ff6a00">
+                  Fitness Matching
+                </h4>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  name="closeModal">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p style="text-align: left">
+                  Please select desired effort level to tailor your trail
+                  search.
+                </p>
+                <div class="form-check" style="text-align: left">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="modalRadio"
+                    id="formCheck-1"
+                    value="easy"
+                    disabled/>
+                  <label
+                    class="form-check-label"
+                    for="formCheck-1"
+                    style="color: #fd8a38"
+                    >Easy and Chill</label>
+                </div>
+                <div class="form-check" style="text-align: left">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="modalRadio"
+                    id="formCheck-2"
+                    value="match"
+                    disabled/>
+                  <label
+                    class="form-check-label"
+                    for="formCheck-2"
+                    style="color: #fd8a38"
+                    >Best Match</label>
+                </div>
+                <div class="form-check" style="text-align: left">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="modalRadio"
+                    id="formCheck-3"
+                    value="challenge"
+                    disabled/>
+                  <label
+                    class="form-check-label"
+                    for="formCheck-3"
+                    style="color: #fd8a38">
+                    Challenge Me
+                  </label>
+                </div>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <div class="col-sm">
+                  <!-- Toggle switch -->
+                  <div
+                    class="custom-control custom-switch"
+                    style="font-size: small">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customSwitches"/>
+                    <label class="custom-control-label" for="customSwitches"
+                      >Enable fitness matching</label>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-dismiss="modal"
+                  name="closeModal">
+                  Cancel
+                </button>
+                <button 
+                class="btn btn-primary" 
+                type="button"
+                data-dismiss="modal"
+                id="Save">
+                Save</button>
+              </div>
             </div>
           </div>
-          <h5 class="text-center text-dark mt-3">
-            Found <span id="results-count"></span> trails within 10 miles of
-            <span class="text-secondary" id="results-location"></span>
-          </h5>
-          <div class="text-center">
-            <small>Looking for personalized trails?</small>
-          </div>
-          <br />
-
-          <!-- Button opens Modal -->
-          <div class="text-center">
-            <button
-              class="btn btn-primary btn-sm"
-              data-toggle="modal"
-              data-target="#myModal"
-            >
-              Just for you
-            </button>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title" style="color: #ff6a00">
-                    Fitness Matching
-                  </h4>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p style="text-align: left">
-                    Please select desired effort level to tailor your trail
-                    search.
-                  </p>
-                  <div class="form-check" style="text-align: left">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="modalRadio"
-                      id="formCheck-1"
-                    /><label
-                      class="form-check-label"
-                      for="formCheck-1"
-                      style="color: #fd8a38"
-                      >Easy and Chill</label
-                    >
-                  </div>
-
-                  <div class="form-check" style="text-align: left">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="modalRadio"
-                      id="formCheck-2"
-                    /><label
-                      class="form-check-label"
-                      for="formCheck-2"
-                      style="color: #fd8a38"
-                      >Best Match</label
-                    >
-                  </div>
+        </div>
 
                   <div class="form-check" style="text-align: left">
                     <input
@@ -222,5 +239,6 @@
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
     <script src="assets/js/trails.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>

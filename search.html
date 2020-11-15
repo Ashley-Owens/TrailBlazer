@@ -93,8 +93,8 @@
                     type="button"
                     class="close"
                     data-dismiss="modal"
-                    aria-label="Close"
-                  >
+                    name="closeModal"
+                    aria-label="Close">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
@@ -108,37 +108,44 @@
                       type="radio"
                       name="modalRadio"
                       id="formCheck-1"
-                    /><label
+                      value="easy"
+                      disabled/>
+                    <label
                       class="form-check-label"
                       for="formCheck-1"
-                      style="color: #fd8a38"
-                      >Easy and Chill</label>
+                      style="color: #fd8a38">
+                      Easy and Chill
+                    </label>
                   </div>
-
                   <div class="form-check" style="text-align: left">
                     <input
                       class="form-check-input"
                       type="radio"
                       name="modalRadio"
                       id="formCheck-2"
-                    /><label 
+                      value="match"
+                      disabled/>
+                    <label 
                       class="form-check-label" 
                       for="formCheck-2" 
-                      style="color: #fd8a38"
-                      >Best Match</label>
+                      style="color: #fd8a38">
+                      Best Match
+                    </label>
                   </div>
-
                   <div class="form-check" style="text-align: left">
                     <input
                       class="form-check-input"
                       type="radio"
                       name="modalRadio"
                       id="formCheck-3"
-                    /><label
+                      value="challenge"
+                      disabled/>
+                    <label
                       class="form-check-label"
                       for="formCheck-3"
-                      style="color: #fd8a38"
-                      >Challenge Me</label>
+                      style="color: #fd8a38">
+                      Challenge Me
+                    </label>
                   </div>
                 </div>
                 <!-- Modal footer -->
@@ -153,9 +160,15 @@
                   <button
                     class="btn btn-light"
                     type="button"
-                    data-dismiss="modal">
-                    Close</button>
-                  <button class="btn btn-primary" type="button">
+                    data-dismiss="modal"
+                    name="closeModal">
+                    Cancel
+                  </button>
+                  <button 
+                  class="btn btn-primary" 
+                  type="button"
+                  id="Save"
+                  data-dismiss="modal">
                     Save
                   </button>
                 </div>
@@ -185,5 +198,6 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>
