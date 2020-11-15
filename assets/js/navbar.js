@@ -1,8 +1,8 @@
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("navbar");
-    const content = document.getElementById("content");
+    const navbar = $("#navbar");
+    const content = $(".content");
 
-    content.style.paddingTop = navbar.getBoundingClientRect().height + "px";
+    content.css("paddingTop", navbar[0].getBoundingClientRect().height + "px");
   });
 })();

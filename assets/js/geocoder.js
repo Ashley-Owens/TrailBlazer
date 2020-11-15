@@ -12,16 +12,18 @@
     geocoder.addTo("#geocoder");
 
     let latLong = [undefined, undefined];
+    let location = undefined;
 
     geocoder.on("result", function ({ result }) {
       if (result && result.center) {
         latLong = result.center;
+        location = result.place_name;
       }
     });
 
     $("#search-btn").on("click", () => {
       window.location.assign(
-        `trails.html?lat=${latLong[0]}&long=${latLong[1]}`
+        `trails.html?lat=${latLong[1]}&long=${latLong[0]}&location=${location}`
       );
     });
   });
