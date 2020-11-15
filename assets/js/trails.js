@@ -227,6 +227,15 @@ const createGridCard = (trail) => {
 };
 
 /**
+ * Empties the contents of the global currentTrails array and copies each trail
+ * in the global trails array into currentTrails.
+ */
+const resetTrails = () => {
+  currentTrails.splice(0, currentTrails.length);
+  Object.assign(currentTrails, trails);
+};
+
+/**
  * Displays a list view of the trails from the search results
  * @param {Trail[]} - An array of trails to display in a list view
  */
@@ -338,8 +347,9 @@ const toggleGridView = (trails) => {
         })
         .then(({ data }) => {
           trails = data.trails;
-          currentTrails = data.trails;
-          toggleListView(currentTrails);
+          Object.assign(currentTrails, trails);
+
+          toggleListView(trails);
           $("#results-count").text(`${trails.length}`);
           $("#results-location").text(`${location}`);
 
