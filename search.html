@@ -8,35 +8,19 @@
     />
     <title>TrailBlazer</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Bitter:400,700"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"/>
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/fonts/material-icons.min.css" />
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css" />
     <link rel="stylesheet" href="assets/css/Features-Boxed.css" />
     <link rel="stylesheet" href="assets/css/Footer-Clean.css" />
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css" />
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"/>
   </head>
 
   <body class="d-flex flex-column h-100">
@@ -84,14 +68,15 @@
           data-toggle="modal" 
           data-target="#myModal" 
           name="filterSearch">
-          Filter</button>
+          Filter
+        </button>
 
           <!-- Modal -->
           <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title" style="color: #ff6a00">
+                  <h4 class="modal-title">
                     Fitness Matching
                   </h4>
                   <button
@@ -104,10 +89,10 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p style="text-align: left">
+                  <p>
                     Please select desired effort level to tailor your trail search.
                   </p>
-                  <div class="form-check" style="text-align: left">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -117,12 +102,11 @@
                       disabled/>
                     <label
                       class="form-check-label"
-                      for="formCheck-1"
-                      style="color: #fd8a38">
+                      for="formCheck-1">
                       Easy and Chill
                     </label>
                   </div>
-                  <div class="form-check" style="text-align: left">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -132,12 +116,11 @@
                       disabled/>
                     <label 
                       class="form-check-label" 
-                      for="formCheck-2" 
-                      style="color: #fd8a38">
+                      for="formCheck-2">
                       Best Match
                     </label>
                   </div>
-                  <div class="form-check" style="text-align: left">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -147,8 +130,7 @@
                       disabled/>
                     <label
                       class="form-check-label"
-                      for="formCheck-3"
-                      style="color: #fd8a38">
+                      for="formCheck-3">
                       Challenge Me
                     </label>
                   </div>
@@ -157,7 +139,7 @@
                 <div class="modal-footer">
                   <div class="col-sm">
                   <!-- Toggle switch -->
-                  <div class="custom-control custom-switch" style="font-size: small">
+                  <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitches">
                     <label class="custom-control-label" for="customSwitches">Enable fitness matching</label>
                   </div>

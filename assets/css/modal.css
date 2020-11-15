@@ -1,0 +1,19 @@
+.modal-title {
+    color: #ff6a00;
+}
+
+.form-check-label {
+    color: #fd8a38;
+}
+
+.form-check {
+    text-align: left;
+}
+
+.modal-body {
+    text-align: left;
+}
+
+.custom-control-label {
+    font-size: small;
+}

@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="assets/css/Features-Boxed.css" />
     <link rel="stylesheet" href="assets/css/Footer-Clean.css" />
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css" />
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
   </head>
 
   <body class="vh-100">
@@ -122,7 +122,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title" style="color: #ff6a00">
+                  <h4 class="modal-title">
                     Fitness Matching
                   </h4>
                   <button
@@ -130,62 +130,53 @@
                     class="close"
                     data-dismiss="modal"
                     aria-label="Close"
-                    name="closeModal"
-                  >
+                    name="closeModal">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p style="text-align: left">
+                  <p>
                     Please select desired effort level to tailor your trail
                     search.
                   </p>
-                  <div class="form-check" style="text-align: left">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
                       name="modalRadio"
                       id="formCheck-1"
                       value="easy"
-                      disabled
-                    />
+                      disabled/>
                     <label
                       class="form-check-label"
-                      for="formCheck-1"
-                      style="color: #fd8a38"
-                      >Easy and Chill</label
-                    >
+                      for="formCheck-1">
+                      Easy and Chill</label>
                   </div>
-                  <div class="form-check" style="text-align: left">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
                       name="modalRadio"
                       id="formCheck-2"
                       value="match"
-                      disabled
-                    />
+                      disabled/>
                     <label
                       class="form-check-label"
-                      for="formCheck-2"
-                      style="color: #fd8a38"
-                      >Best Match</label
-                    >
+                      for="formCheck-2">
+                      Best Match
+                      </label>
                   </div>
-                  <div class="form-check" style="text-align: left">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
                       name="modalRadio"
                       id="formCheck-3"
                       value="challenge"
-                      disabled
-                    />
+                      disabled/>
                     <label
                       class="form-check-label"
-                      for="formCheck-3"
-                      style="color: #fd8a38"
-                    >
+                      for="formCheck-3">
                       Challenge Me
                     </label>
                   </div>
@@ -196,39 +187,34 @@
                     <!-- Toggle switch -->
                     <div
                       class="custom-control custom-switch"
-                      style="font-size: small"
-                    >
+                      style="font-size: small">
                       <input
                         type="checkbox"
                         class="custom-control-input"
-                        id="customSwitches"
-                      />
-                      <label class="custom-control-label" for="customSwitches"
-                        >Enable fitness matching</label
-                      >
+                        id="customSwitches"/>
+                      <label class="custom-control-label" for="customSwitches">
+                      Enable fitness matching
+                      </label>
                     </div>
                   </div>
                   <button
                     class="btn btn-light"
                     type="button"
                     data-dismiss="modal"
-                    name="closeModal"
-                  >
+                    name="closeModal">
                     Cancel
                   </button>
                   <button
                     class="btn btn-primary"
                     type="button"
                     data-dismiss="modal"
-                    id="Save"
-                  >
+                    id="Save">
                     Save
                   </button>
                 </div>
               </div>
             </div>
           </div>
-
           <hr />
           <div class="d-flex flex-column align-items-center" id="trails"></div>
         </div>
