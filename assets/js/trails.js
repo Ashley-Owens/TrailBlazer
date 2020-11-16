@@ -30,10 +30,11 @@ let trails = [];
 let currentTrails = [];
 let currentView = "list";
 
+
 /**
  * Calculates the difficulty of a trail.
  * @param {Trail} trail - The trail to calculate the difficulty for
- * @returns {string} - One of "easy", "medium", or "difficult"
+ * @returns {string} - One of "easy", "medium", or "hard"
  */
 const calculateDifficulty = (trail) => {
   let difficulty;
@@ -294,6 +295,28 @@ const toggleGridView = (trails) => {
   });
 })();
 
+
+// Filters currentTrails array by difficulty rating.
+function filterByDifficulty(value) {
+  var filteredList = [];
+  for (var i = 0; i < currentTrails.length; i++) {
+    var rating = calculateDifficulty(currentTrails[i]);
+    if (rating === value) {
+      filteredList.push(currentTrails[i]);
+    }
+  }
+  return filteredList;
+}
+
+// Filters trails according to user request.
+function filterTrails() {
+  var selectionID = document.getElementById(myStorage.getItem("userSelection"));
+  var filteredTrails = filterByDifficulty(selectionID.value);
+  currentTrails.splice(0, currentTrails.length);
+  Object.assign(currentTrails, filteredTrails);
+}
+
+
 /**
  * Loads the search results based on the coordinates provided in the query string.
  */
@@ -339,8 +362,8 @@ const toggleGridView = (trails) => {
           params: {
             lat: lat,
             lon: long,
-            maxDistance: 10,
-            maxResults: 20,
+            maxDistance: 25,
+            maxResults: 30,
             sort: "distance",
             key: "200972057-cecb24f98c06e7baf18a485d402ce097",
           },
@@ -348,14 +371,45 @@ const toggleGridView = (trails) => {
         .then(({ data }) => {
           trails = data.trails;
           Object.assign(currentTrails, trails);
+          
+          // Checks for trail filtering request.
+          if (window.localStorage.getItem("userSelection")) {
+            filterTrails();
+          }
 
-          toggleListView(trails);
-          $("#results-count").text(`${trails.length}`);
+          $(document).ready(function(){
+            $("#justForYou").click (function () {
+          
+                if ($(toggle).prop('checked') === true) {
+                  resetTrails();
+                  input = getSelection();
+                  saveSettings(input);
+                  filterTrails();
+
+                  // print trails
+                  toggleListView(currentTrails);
+                  $("#results-count").text(`${currentTrails.length}`);
+                  $("#results-location").text(`${location}`);
+
+                } else {
+                  resetTrails();
+
+                  // print trails
+                  toggleListView(currentTrails);
+                  $("#results-count").text(`${currentTrails.length}`);
+                  $("#results-location").text(`${location}`);
+                }
+            })
+          });
+
+          toggleListView(currentTrails);
+          $("#results-count").text(`${currentTrails.length}`);
           $("#results-location").text(`${location}`);
 
           loadingScreen.hide();
           loadingScreen.removeClass("d-flex");
           results.removeClass("d-none");
+          
         });
     }
   });

@@ -2,7 +2,7 @@
 var toggle = document.querySelector("#customSwitches");
 var radios = document.getElementsByName("modalRadio");
 var filterButton = document.getElementsByName("filterSearch");
-var saveButton = document.getElementById("Save");
+var saveButton = document.getElementsByName("Save");
 myStorage = window.localStorage;
 
 
