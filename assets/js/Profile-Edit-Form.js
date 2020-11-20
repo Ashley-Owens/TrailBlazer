@@ -93,9 +93,6 @@
       fitnessLevel = fitnessLevel
     }
 
-
-    // const fitnessLevel = 7.8;
-
     $("#fitness-level")
       .text(`Your calculated fitness level is `)
       .append($(`<span class="text-primary text-bold">${fitnessLevel}</span>`));
