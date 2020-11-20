@@ -17,7 +17,7 @@ $(document).ready(function(){
         
         // Restore user's saved settings.
         if (myStorage.getItem("userSelection")) {
-            var selectionID = document.getElementById(myStorage.getItem("userSelection"));
+            let selectionID = document.getElementById(myStorage.getItem("userSelection"));
             $(radios).prop("disabled", false);
             $(selectionID).prop("checked", true);
             $(toggle).prop('checked', true);
@@ -67,7 +67,7 @@ $(document).ready(function(){
     $(saveButton).click (function () {
 
         if ($(toggle).prop('checked') === true) {
-            input = getSelection();
+            let input = getSelection();
             saveSettings(input);
         } 
     })

@@ -98,11 +98,11 @@
     if (fitnessLevel == 0) {
       fitnessLevelString = "n/a"
     } else if (fitnessLevel <= 4 ) {
-      fitnessLevelString = "Easy"
+      fitnessLevelString = "easy"
     } else if (fitnessLevel <= 7 ) {
-      fitnessLevelString = "Medium"
+      fitnessLevelString = "medium"
     } else if (fitnessLevel <= 10 ) {
-      fitnessLevelString = "Hard"
+      fitnessLevelString = "hard"
     } else {
       fitnessLevel = fitnessLevel
     }

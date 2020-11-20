@@ -294,11 +294,11 @@ const toggleGridView = (trails) => {
   });
 })();
 
-// Filters currentTrails array by difficulty rating.
+// Filters currentTrails array by generic difficulty rating.
 function filterByDifficulty(value) {
-  var filteredList = [];
+  let filteredList = [];
   for (var i = 0; i < currentTrails.length; i++) {
-    var rating = calculateDifficulty(currentTrails[i]);
+    let rating = calculateDifficulty(currentTrails[i]);
     if (rating === value) {
       filteredList.push(currentTrails[i]);
     }
@@ -306,12 +306,47 @@ function filterByDifficulty(value) {
   return filteredList;
 }
 
-// Filters trails according to user request.
-function filterTrails() {
-  var selectionID = document.getElementById(myStorage.getItem("userSelection"));
-  var filteredTrails = filterByDifficulty(selectionID.value);
+// Filters trails according to the method i.e. generic or matching.
+function filterTrails(method, selection) {
+  let filteredTrails;
+  if (method === "generic"){
+    filteredTrails = filterByDifficulty(selection);
+  } else {
+    filteredTrails = filterByMatch(selection);
+  }
   currentTrails.splice(0, currentTrails.length);
   Object.assign(currentTrails, filteredTrails);
+}
+
+// Filters currentTrails array by expanded difficulty rating for improved trail matching.
+function filterByMatch(value) {
+  let filteredList = [];
+  for (var i = 0; i < currentTrails.length; i++) {
+    let rating = currentTrails[i].difficulty;
+    if (rating === value) {
+      filteredList.push(currentTrails[i]);
+    }
+  }
+  return filteredList;
+}
+
+// Filters trails according to user request and fitness level.
+function trailMatching(fitnessLevel, selection) {
+  if (fitnessLevel === "easy" && selection === "medium"){
+    filterTrails("match", "green");
+  } else if (fitnessLevel === "easy" && selection === "hard") {
+    filterTrails("match", "greenBlue");
+  } else if (fitnessLevel === "medium" && selection === "hard") {
+    filterTrails("match", "blueBlack");  
+  } else if (fitnessLevel === "hard" && selection === "easy") {
+    filterTrails("generic", "medium");
+  } else if (fitnessLevel === "hard" && selection === "medium") {
+    filterTrails("match", "blueBlack");  
+  } else if (fitnessLevel === "hard" && selection === "hard") {
+    filterTrails("match", "black");  
+  } else {
+    filterTrails("generic", selection);
+  }
 }
 
 /**
@@ -368,26 +403,38 @@ function filterTrails() {
         .then(({ data }) => {
           trails = data.trails;
           Object.assign(currentTrails, trails);
+          let fitnessLevel = window.localStorage.getItem("fitnessLevel");
+          let selectionID = document.getElementById(myStorage.getItem("userSelection"));
+          
 
-          // Checks for trail filtering request.
-          if (window.localStorage.getItem("userSelection")) {
-            filterTrails();
+          // Checks for trail filtering requests from search.html modal
+          if (fitnessLevel && selectionID) {
+            trailMatching(fitnessLevel, selectionID.value);
+          } else if (selectionID) {
+            filterTrails("generic", selectionID.value);
           }
 
-          // Enables filtering on previously obtained unfiltered trail list.
+          // Enables filtering on previously obtained trail list from trails.html modal
           $(document).ready(function () {
             $("#justForYou").click(function () {
               if ($(toggle).prop("checked") === true) {
                 resetTrails();
-                input = getSelection();
-                saveSettings(input);
-                filterTrails();
+                let fitnessLevel = window.localStorage.getItem("fitnessLevel");
+                let selectionID = document.getElementById(myStorage.getItem("userSelection"));
+
+                if (fitnessLevel && selectionID) {
+                  trailMatching(fitnessLevel, selectionID.value);
+                } else if (selectionID) {
+                  filterTrails("generic", selectionID.value);
+                }
 
                 // print trails
                 toggleListView(currentTrails);
                 $("#results-count").text(`${currentTrails.length}`);
                 $("#results-location").text(`${location}`);
+
               } else {
+                // disables trail filtering
                 resetTrails();
 
                 // print trails
