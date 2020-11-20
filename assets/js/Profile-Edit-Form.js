@@ -93,8 +93,22 @@
       fitnessLevel = fitnessLevel
     }
 
+    var fitnessLevelString = ""
+
     if (fitnessLevel == 0) {
-      fitnessLevel = fitnessLevel + "  , Sorry, you are too young"
+      fitnessLevelString = "n/a"
+    } else if (fitnessLevel <= 4 ) {
+      fitnessLevelString = "Easy"
+    } else if (fitnessLevel <= 7 ) {
+      fitnessLevelString = "Medium"
+    } else if (fitnessLevel <= 10 ) {
+      fitnessLevelString = "Hard"
+    } else {
+      fitnessLevel = fitnessLevel
+    }
+
+    if (fitnessLevel == 0) {
+      fitnessLevel = fitnessLevel + "  , Sorry, you are too young. :-("
     } else if (fitnessLevel <= 4 ) {
       fitnessLevel = fitnessLevel + "  , Easy"
     } else if (fitnessLevel <= 7 ) {
@@ -110,7 +124,7 @@
       .append($(`<span class="text-primary text-bold">${fitnessLevel}</span>`));
 
     if (window.localStorage) {
-      window.localStorage.setItem("fitnessLevel", fitnessLevel);
+      window.localStorage.setItem("fitnessLevel", fitnessLevelString);
     }
   };
 
