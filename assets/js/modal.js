@@ -10,6 +10,12 @@ myStorage = window.localStorage;
 $(document).ready(function(){
     $(filterButton).click (function () {
 
+        // Issues warning message for a user without a fitnessLevel calculation.
+        if (window.localStorage.getItem("fitnessLevel")) {
+            $(".alert").alert('close')
+        }
+        
+        // Restore user's saved settings.
         if (myStorage.getItem("userSelection")) {
             var selectionID = document.getElementById(myStorage.getItem("userSelection"));
             $(radios).prop("disabled", false);

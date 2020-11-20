@@ -374,6 +374,7 @@ function filterTrails() {
             filterTrails();
           }
 
+          // Enables filtering on previously obtained unfiltered trail list.
           $(document).ready(function () {
             $("#justForYou").click(function () {
               if ($(toggle).prop("checked") === true) {
