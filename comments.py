@@ -25,6 +25,9 @@ Gear page
     DONE
         •	Add description for why each item is recommended
 
+Collected all webpages together for video
+    DONE
+
 Product backlog (create ClickUp tasks)
     TODO 
         •	Feature 3: Scenario 2 of 3
