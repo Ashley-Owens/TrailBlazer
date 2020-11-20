@@ -93,6 +93,18 @@
       fitnessLevel = fitnessLevel
     }
 
+    if (fitnessLevel == 0) {
+      fitnessLevel = fitnessLevel + "  , Too young"
+    } else if (fitnessLevel <= 4 ) {
+      fitnessLevel = fitnessLevel + "  , Easy"
+    } else if (fitnessLevel <= 7 ) {
+      fitnessLevel = fitnessLevel + "  , Medium"
+    } else if (fitnessLevel <= 10 ) {
+      fitnessLevel = fitnessLevel + "  , Hard"
+    } else {
+      fitnessLevel = fitnessLevel
+    }
+
     $("#fitness-level")
       .text(`Your calculated fitness level is `)
       .append($(`<span class="text-primary text-bold">${fitnessLevel}</span>`));
