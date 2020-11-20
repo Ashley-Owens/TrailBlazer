@@ -60,6 +60,7 @@ Changed HTML Page for Gender to show Weight for better Calcs
         Normal,             + 2
         Large / Overweight, + 1
     
+    n/a -->    0
     Easy -->   1 - 4
     Medium --> 5 - 7
     Hard -->   8 - 10
