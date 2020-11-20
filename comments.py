@@ -37,6 +37,6 @@ Product backlog (create ClickUp tasks)
     DONE
         •	Have profile information persist on profile page
 
-
+Changed HTML Page for Gender to show Weight for better Calcs
 
 """
