@@ -38,6 +38,35 @@ Product backlog (create ClickUp tasks)
         •	Have profile information persist on profile page
 
 Changed HTML Page for Gender to show Weight for better Calcs
+    Here is the point based system...
+
+    Age
+        0-10 , - 10 (we do not suggest trails for children)
+        15-35, + 3
+        35-45, + 2
+        45-55, + 1
+        55-65, + 0
+        65 ++, - 2
+    
+    Activity Level
+        Extremely,  + 4
+        Vigorously, + 3
+        Moderately, + 2
+        Sedentary,  + 1
+        Inactive,   + 0
+    
+    Body Type
+        Fit / Athletic,     + 3
+        Normal,             + 2
+        Large / Overweight, + 1
+    
+    Easy -->   1 - 4
+    Medium --> 5 - 7
+    Hard -->   8 - 10
+
+    
+
+
 
 
 """

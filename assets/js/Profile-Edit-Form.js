@@ -70,7 +70,7 @@
     
     var age = parseInt(age)
     // fitnessLevel = typeof age
-
+    
     if (age < 10) {
       fitnessLevel = fitnessLevel - 10
     } else if (age < 15) {
