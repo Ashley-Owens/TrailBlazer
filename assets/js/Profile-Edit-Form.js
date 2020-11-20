@@ -37,6 +37,7 @@
   });
 
   const calculateFitnessLevel = (profile) => {
+    // calculate fitness level and assign it to a variable called "fitnessLevel"
     const fitnessLevel = 7.8;
 
     $("#fitness-level")

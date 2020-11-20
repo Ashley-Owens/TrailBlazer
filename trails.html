@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="assets/css/Footer-Clean.css" />
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/trails.css" />
   </head>
 
   <body class="vh-100">
@@ -98,7 +99,7 @@
               ></span>
             </div>
           </div>
-          <h5 class="text-center text-dark mt-3">
+          <h5 class="text-center text-dark mt-5">
             Found <span id="results-count"></span> trails within 10 miles of
             <span class="text-secondary" id="results-location"></span>
           </h5>
@@ -113,7 +114,8 @@
               class="btn btn-primary btn-sm"
               data-toggle="modal"
               data-target="#myModal"
-              name="filterSearch">
+              name="filterSearch"
+            >
               Just for you
             </button>
           </div>
@@ -122,15 +124,14 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">
-                    Fitness Matching
-                  </h4>
+                  <h4 class="modal-title">Fitness Matching</h4>
                   <button
                     type="button"
                     class="close"
                     data-dismiss="modal"
                     aria-label="Close"
-                    name="closeModal">
+                    name="closeModal"
+                  >
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
@@ -146,11 +147,11 @@
                       name="modalRadio"
                       id="formCheck-1"
                       value="easy"
-                      disabled/>
-                    <label
-                      class="form-check-label"
-                      for="formCheck-1">
-                      Easy and Chill</label>
+                      disabled
+                    />
+                    <label class="form-check-label" for="formCheck-1">
+                      Easy and Chill</label
+                    >
                   </div>
                   <div class="form-check">
                     <input
@@ -159,12 +160,11 @@
                       name="modalRadio"
                       id="formCheck-2"
                       value="medium"
-                      disabled/>
-                    <label
-                      class="form-check-label"
-                      for="formCheck-2">
+                      disabled
+                    />
+                    <label class="form-check-label" for="formCheck-2">
                       Best Match
-                      </label>
+                    </label>
                   </div>
                   <div class="form-check">
                     <input
@@ -173,10 +173,9 @@
                       name="modalRadio"
                       id="formCheck-3"
                       value="hard"
-                      disabled/>
-                    <label
-                      class="form-check-label"
-                      for="formCheck-3">
+                      disabled
+                    />
+                    <label class="form-check-label" for="formCheck-3">
                       Challenge Me
                     </label>
                   </div>
@@ -187,13 +186,15 @@
                     <!-- Toggle switch -->
                     <div
                       class="custom-control custom-switch"
-                      style="font-size: small">
+                      style="font-size: small"
+                    >
                       <input
                         type="checkbox"
                         class="custom-control-input"
-                        id="customSwitches"/>
+                        id="customSwitches"
+                      />
                       <label class="custom-control-label" for="customSwitches">
-                      Enable fitness matching
+                        Enable fitness matching
                       </label>
                     </div>
                   </div>
@@ -201,7 +202,8 @@
                     class="btn btn-light"
                     type="button"
                     data-dismiss="modal"
-                    name="closeModal">
+                    name="closeModal"
+                  >
                     Cancel
                   </button>
                   <button
@@ -209,7 +211,8 @@
                     type="button"
                     data-dismiss="modal"
                     name="Save"
-                    id="justForYou">
+                    id="justForYou"
+                  >
                     Save
                   </button>
                 </div>

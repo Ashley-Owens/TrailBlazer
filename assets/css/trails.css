@@ -1,0 +1,4 @@
+#list-view-btn:hover,
+#grid-view-btn:hover {
+  color: var(--primary);
+}
