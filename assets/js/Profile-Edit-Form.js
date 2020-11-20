@@ -94,7 +94,7 @@
     }
 
     if (fitnessLevel == 0) {
-      fitnessLevel = fitnessLevel + "  , Too young"
+      fitnessLevel = fitnessLevel + "  , Sorry, you are too young"
     } else if (fitnessLevel <= 4 ) {
       fitnessLevel = fitnessLevel + "  , Easy"
     } else if (fitnessLevel <= 7 ) {
