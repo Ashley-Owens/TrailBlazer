@@ -38,7 +38,63 @@
 
   const calculateFitnessLevel = (profile) => {
     // calculate fitness level and assign it to a variable called "fitnessLevel"
-    const fitnessLevel = 7.8;
+    var age = window.localStorage.getItem("age")
+    var level = window.localStorage.getItem("activityLevel")
+    var weight = window.localStorage.getItem("weight")
+    var fitnessLevel = 0
+
+    // calculate fitness level on a scale of 10 pts, with weighted values
+    if (weight == "Large") {
+      fitnessLevel = fitnessLevel + 1
+    } else if (weight == "Normal") {
+      fitnessLevel = fitnessLevel + 2
+    } else if (weight == "Fit") {
+      fitnessLevel = fitnessLevel + 3
+    } else {
+      fitnessLevel = fitnessLevel
+    }
+
+    if (level == "Extremely Inactive") {
+      fitnessLevel = fitnessLevel + 0
+    } else if (level == "Sedentary") {
+      fitnessLevel = fitnessLevel + 1
+    } else if (level == "Moderately Active") {
+      fitnessLevel = fitnessLevel + 2
+    } else if (level == "Vigorously Active") {
+      fitnessLevel = fitnessLevel + 3
+    } else if (level == "Extremely Active") {
+      fitnessLevel = fitnessLevel + 4
+    } else {
+      fitnessLevel = fitnessLevel
+    }
+    
+    var age = parseInt(age)
+    // fitnessLevel = typeof age
+
+    if (age < 10) {
+      fitnessLevel = fitnessLevel - 10
+    } else if (age < 15) {
+      fitnessLevel = fitnessLevel + 1
+    } else if (age < 35) {
+      fitnessLevel = fitnessLevel + 3
+    } else if (age < 45) {
+      fitnessLevel = fitnessLevel + 2
+    } else if (age < 55) {
+      fitnessLevel = fitnessLevel + 1
+    } else if (age >= 65) {
+      fitnessLevel = fitnessLevel - 2
+    } else {
+      fitnessLevel = fitnessLevel
+    }
+
+    if (fitnessLevel < 0) {
+      fitnessLevel = 0
+    } else {
+      fitnessLevel = fitnessLevel
+    }
+
+
+    // const fitnessLevel = 7.8;
 
     $("#fitness-level")
       .text(`Your calculated fitness level is `)
