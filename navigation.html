@@ -66,22 +66,22 @@
     <div id="content">
       <div class="mt-5 container">
         <h5 class="text-center text-dark"><br /></h5>
-        <div class="text-center">
+        <!-- <div class="text-center">
           <small
             >Looking for personalized trails? Display trails&nbsp;<a href="#"
               >just for you</a
             ></small
           >
-        </div>
-        <hr />
-        <div class="d-flex flex-column align-items-center">
+        </div> -->
+        <!-- <hr /> -->
+        <div class="pt-5 mt-5 d-flex flex-column align-items-center">
           <div class="card w-50 my-3">
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <h5 class="text-left text-black-50" style="color: #7d8285">
-                  Marina Trail
+                  <span id="name"></span>
                 </h5>
-                <div class="d-flex card-text">
+                <!-- <div class="d-flex card-text">
                   <i
                     class="material-icons"
                     style="color: #7d8285; border-color: #ff6a00"
@@ -89,13 +89,13 @@
                   ><span class="text-black-50" style="color: #ff6a00"
                     >3.7 miles</span
                   >
-                </div>
+                </div> -->
               </div>
-              <span class="badge badge-success mt-2">Easy</span>
+              <span id="difficulty" class="badge mt-2"></span>
               <div class="card-text pt-3">
                 <span
                   ><i class="fas fa-road mr-2" style="color: #7d8285"></i>Trail
-                  length: 1.5 miles</span
+                  length: <span id="length"></span> miles</span
                 >
               </div>
               <div class="d-flex justify-content-between card-text pt-3">
@@ -108,22 +108,25 @@
               <div class="d-flex justify-content-between card-text pt-3">
                 <span
                   ><i class="fas fa-tshirt mr-2" style="color: #7d8285"></i
-                  ><a href="#">Gear &amp; clothing</a></span
+                  ><a id="gear-link" href="#">Gear &amp; clothing</a></span
                 >
               </div>
-              <iframe
+              <iframe id = "map"
                 allowfullscreen=""
                 frameborder="0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11"
                 width="100%"
                 height="400"
               ></iframe
-              ><button
+              >
+              <a id="navigate-btn">
+              <button
                 class="btn btn-outline-primary btn-sm mt-4 w-100"
                 type="button"
               >
                 Navigate using Google Maps
               </button>
+            </a>
+
             </div>
           </div>
         </div>
@@ -133,6 +136,8 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/temp.js"></script>
     <script src="assets/js/navigation.js"></script>
   </body>
 </html>

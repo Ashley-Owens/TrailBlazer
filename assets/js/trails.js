@@ -119,7 +119,7 @@ const createListCard = (trail) => {
                       </span>
                   </div>`);
 
-  const navigation = $(`<a href="navigation.html?lat=${trail.latitude}&long=${trail.longitude}">
+  const navigation = $(`<a href="navigation.html?id=${trail.id}">
                           <button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">
                             Navigate to the trailhead
                           </button>
@@ -201,7 +201,7 @@ const createGridCard = (trail) => {
                               </span>
                           </div>`);
 
-  const navigation = $(`<a href="navigation.html?lat=${trail.latitude}&long=${trail.longitude}">
+  const navigation = $(`<a href="navigation.html?id=${trail.id}">
                                 <button class="btn btn-outline-primary btn-sm mt-4 w-100" type="button">
                                   <span style="font-size: 0.9rem">
                                      Navigate to the trailhead
