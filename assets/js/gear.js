@@ -4,7 +4,6 @@ const trailId = urlParams.get('id');
 const trailLength = urlParams.get('length');
 
 $('.masthead-heading').text(trailName)
-$('.masthead-heading').append("\n(ID: " + trailId + ")")
 
 const updateHeaders = (conditions) => {
     $('.condition-status').text(conditions.conditionStatus)
