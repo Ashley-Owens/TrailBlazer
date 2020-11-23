@@ -38,85 +38,85 @@
 
   const calculateFitnessLevel = (profile) => {
     // calculate fitness level and assign it to a variable called "fitnessLevel"
-    var age = window.localStorage.getItem("age")
-    var level = window.localStorage.getItem("activityLevel")
-    var weight = window.localStorage.getItem("weight")
-    var fitnessLevel = 0
+    var age = window.localStorage.getItem("age");
+    var level = window.localStorage.getItem("activityLevel");
+    var weight = window.localStorage.getItem("weight");
+    var fitnessLevel = 0;
 
     // calculate fitness level on a scale of 10 pts, with weighted values
     if (weight == "Large") {
-      fitnessLevel = fitnessLevel + 1
+      fitnessLevel = fitnessLevel + 1;
     } else if (weight == "Normal") {
-      fitnessLevel = fitnessLevel + 2
+      fitnessLevel = fitnessLevel + 2;
     } else if (weight == "Fit") {
-      fitnessLevel = fitnessLevel + 3
+      fitnessLevel = fitnessLevel + 3;
     } else {
-      fitnessLevel = fitnessLevel
+      fitnessLevel = fitnessLevel;
     }
 
     if (level == "Extremely Inactive") {
-      fitnessLevel = fitnessLevel + 0
+      fitnessLevel = fitnessLevel + 0;
     } else if (level == "Sedentary") {
-      fitnessLevel = fitnessLevel + 1
+      fitnessLevel = fitnessLevel + 1;
     } else if (level == "Moderately Active") {
-      fitnessLevel = fitnessLevel + 2
+      fitnessLevel = fitnessLevel + 2;
     } else if (level == "Vigorously Active") {
-      fitnessLevel = fitnessLevel + 3
+      fitnessLevel = fitnessLevel + 3;
     } else if (level == "Extremely Active") {
-      fitnessLevel = fitnessLevel + 4
+      fitnessLevel = fitnessLevel + 4;
     } else {
-      fitnessLevel = fitnessLevel
+      fitnessLevel = fitnessLevel;
     }
-    
-    var age = parseInt(age)
+
+    var age = parseInt(age);
     // fitnessLevel = typeof age
-    
+
     if (age < 10) {
-      fitnessLevel = fitnessLevel - 10
+      fitnessLevel = fitnessLevel - 10;
     } else if (age < 15) {
-      fitnessLevel = fitnessLevel + 1
+      fitnessLevel = fitnessLevel + 1;
     } else if (age < 35) {
-      fitnessLevel = fitnessLevel + 3
+      fitnessLevel = fitnessLevel + 3;
     } else if (age < 45) {
-      fitnessLevel = fitnessLevel + 2
+      fitnessLevel = fitnessLevel + 2;
     } else if (age < 55) {
-      fitnessLevel = fitnessLevel + 1
+      fitnessLevel = fitnessLevel + 1;
     } else if (age >= 65) {
-      fitnessLevel = fitnessLevel - 2
+      fitnessLevel = fitnessLevel - 2;
     } else {
-      fitnessLevel = fitnessLevel
+      fitnessLevel = fitnessLevel;
     }
 
     if (fitnessLevel < 0) {
-      fitnessLevel = 0
+      fitnessLevel = 0;
     } else {
-      fitnessLevel = fitnessLevel
+      fitnessLevel = fitnessLevel;
     }
 
-    var fitnessLevelString = ""
+    var fitnessLevelString = "";
 
     if (fitnessLevel == 0) {
-      fitnessLevelString = "n/a"
-    } else if (fitnessLevel <= 4 ) {
-      fitnessLevelString = "easy"
-    } else if (fitnessLevel <= 7 ) {
-      fitnessLevelString = "medium"
-    } else if (fitnessLevel <= 10 ) {
-      fitnessLevelString = "hard"
+      fitnessLevelString = "n/a";
+    } else if (fitnessLevel <= 4) {
+      fitnessLevelString = "easy";
+    } else if (fitnessLevel <= 7) {
+      fitnessLevelString = "medium";
+    } else if (fitnessLevel <= 10) {
+      fitnessLevelString = "hard";
     } else {
-      fitnessLevel = fitnessLevel
+      fitnessLevel = fitnessLevel;
     }
 
     if (fitnessLevel == 0) {
-      fitnessLevel = fitnessLevel + "  , Sorry, you are too young. :-("
-    } else if (fitnessLevel <= 4 ) {
-      fitnessLevel = fitnessLevel + "  , Easy"
-    } else if (fitnessLevel <= 7 ) {
-      fitnessLevel = fitnessLevel + "  , Medium"
-    } else if (fitnessLevel <= 10 ) {
-      fitnessLevel = fitnessLevel + "  , Hard"
+      fitnessLevel = fitnessLevel + "  , Sorry, you are too young. :-(";
+    } else if (fitnessLevel <= 4) {
+      fitnessLevel = fitnessLevel + "  , Easy";
+    } else if (fitnessLevel <= 7) {
+      fitnessLevel = fitnessLevel + "  , Medium";
+    } else if (fitnessLevel <= 10) {
+      fitnessLevel = fitnessLevel + "  , Hard";
     } else {
-      fitnessLevel = fitnessLevel
+      fitnessLevel = fitnessLevel;
     }
 
     $("#fitness-level")
@@ -159,7 +159,6 @@
 
   $("#profile").delegate("form", "reset", function (e) {
     var inst = this;
-    var formData = new FormData($(this)[0]);
 
     $(inst)
       .find("button[type = reset]")

@@ -80,15 +80,6 @@ const createListCard = (trail) => {
                       ${trail.name}
                     </h5>`);
 
-  // const distance = $(`<div class="d-flex card-text">
-  //                         <i class="material-icons" style="color: #7d8285; border-color: #ff6a00"'>
-  //                             location_on
-  //                         </i>
-  //                       </div>`);
-  //     <span class="text-black-50" style="color: #ff6a00">
-  //     ${trail.distance} miles
-  // </span>
-
   const difficulty = $(`<span class="badge ${
     badgeClasses[trailDifficulty]
   } mt-2">
@@ -125,7 +116,6 @@ const createListCard = (trail) => {
                           </button>
                         </a>`);
 
-  // cardTitle.append([name, distance]);
   cardTitle.append(name);
   cardBody.append([
     cardTitle,
@@ -170,16 +160,6 @@ const createGridCard = (trail) => {
                                   }
                                 </span>`);
 
-  // const distance = $(`<div class="d-flex">
-  //                               <i class="material-icons" style="color: #7d8285; border-color: #ff6a00"'>
-  //                                   location_on
-  //                               </i>
-  //                           </div>`);
-
-  //       <span class="text-black-50" style="color: #ff6a00">
-  //       ${distance} miles
-  //   </span>
-
   const length = $(`<div class="card-text pt-3">
                               <div style="font-size: 0.9rem">
                                   <i class="fas fa-road mr-2" style="color: #7d8285"></i>
@@ -211,10 +191,6 @@ const createGridCard = (trail) => {
 
   cardBody.append([
     name,
-    // $('<div class="d-flex justify-content-between"></div>').append([
-    //   difficulty,
-    //   distance,
-    // ]),
     $('<div class="d-flex justify-content-between"></div>').append(difficulty),
     length,
     trailheadCoordinates,
@@ -309,7 +285,7 @@ function filterByDifficulty(value) {
 // Filters trails according to the method i.e. generic or matching.
 function filterTrails(method, selection) {
   let filteredTrails;
-  if (method === "generic"){
+  if (method === "generic") {
     filteredTrails = filterByDifficulty(selection);
   } else {
     filteredTrails = filterByMatch(selection);
@@ -332,18 +308,18 @@ function filterByMatch(value) {
 
 // Filters trails according to user request and fitness level.
 function trailMatching(fitnessLevel, selection) {
-  if (fitnessLevel === "easy" && selection === "medium"){
+  if (fitnessLevel === "easy" && selection === "medium") {
     filterTrails("match", "green");
   } else if (fitnessLevel === "easy" && selection === "hard") {
     filterTrails("match", "greenBlue");
   } else if (fitnessLevel === "medium" && selection === "hard") {
-    filterTrails("match", "blueBlack");  
+    filterTrails("match", "blueBlack");
   } else if (fitnessLevel === "hard" && selection === "easy") {
     filterTrails("generic", "medium");
   } else if (fitnessLevel === "hard" && selection === "medium") {
-    filterTrails("match", "blueBlack");  
+    filterTrails("match", "blueBlack");
   } else if (fitnessLevel === "hard" && selection === "hard") {
-    filterTrails("match", "black");  
+    filterTrails("match", "black");
   } else {
     filterTrails("generic", selection);
   }
@@ -404,8 +380,9 @@ function trailMatching(fitnessLevel, selection) {
           trails = data.trails;
           Object.assign(currentTrails, trails);
           let fitnessLevel = window.localStorage.getItem("fitnessLevel");
-          let selectionID = document.getElementById(myStorage.getItem("userSelection"));
-          
+          let selectionID = document.getElementById(
+            myStorage.getItem("userSelection")
+          );
 
           // Checks for trail filtering requests from search.html modal
           if (fitnessLevel && selectionID) {
@@ -420,7 +397,9 @@ function trailMatching(fitnessLevel, selection) {
               if ($(toggle).prop("checked") === true) {
                 resetTrails();
                 let fitnessLevel = window.localStorage.getItem("fitnessLevel");
-                let selectionID = document.getElementById(myStorage.getItem("userSelection"));
+                let selectionID = document.getElementById(
+                  myStorage.getItem("userSelection")
+                );
 
                 if (fitnessLevel && selectionID) {
                   trailMatching(fitnessLevel, selectionID.value);
@@ -432,7 +411,6 @@ function trailMatching(fitnessLevel, selection) {
                 toggleListView(currentTrails);
                 $("#results-count").text(`${currentTrails.length}`);
                 $("#results-location").text(`${location}`);
-
               } else {
                 // disables trail filtering
                 resetTrails();
