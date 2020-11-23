@@ -71,6 +71,7 @@
     var age = parseInt(age);
     // fitnessLevel = typeof age
 
+    // Change for code smell
     if (age < 10) {
       fitnessLevel = fitnessLevel - 10;
     } else if (age < 15) {
