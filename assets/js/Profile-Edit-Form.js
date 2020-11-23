@@ -43,6 +43,7 @@
     var weight = window.localStorage.getItem("weight");
     var fitnessLevel = 0;
 
+    
     // calculate fitness level on a scale of 10 pts, with weighted values
     if (weight == "Large") {
       fitnessLevel = fitnessLevel + 1;
@@ -96,6 +97,7 @@
 
     var fitnessLevelString = "";
 
+    // Change for code smell
     if (fitnessLevel == 0) {
       fitnessLevelString = "n/a";
     } else if (fitnessLevel <= 4) {
