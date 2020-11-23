@@ -1,16 +1,4 @@
-// const urlParams = new URLSearchParams(window.location.search);
-// const trailName = urlParams.get('name');
-// const trailId = urlParams.get('id');
-// const trailLength = urlParams.get('length');
-
-// $('.masthead-heading').text(trailName)
-// $('.masthead-heading').append("\n(ID: " + trailId + ")")
-
-// const updateHeaders = (conditions) => {
-//     $('.condition-status').text(conditions.conditionStatus)
-//     $('.estimated-time').text(trailLength + " miles")
-// }
-
+// Convert trail API difficulty into Trailblazer difficulty
 const calculateDifficulty = (trail) => {
     let difficulty;
   
@@ -35,9 +23,7 @@ const calculateDifficulty = (trail) => {
     return difficulty;
   };
 
-
-
-// TODO refactor URL query params for other nav pages, continue to edit gear page
+  // Call API to pull in the data from Trail ID, use that data on the HTML page
 (function () {
     document.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -71,8 +57,12 @@ const calculateDifficulty = (trail) => {
                 // let mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&"
                 // mapLink = mapLink + "whatever";
 
-                // Tester link
+                // Tester link --> in the works
                 // mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11"
+
+                // https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11
+                // gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}
+
                 mapLink = "https://www.google.com/maps/"
 
 
@@ -86,8 +76,5 @@ const calculateDifficulty = (trail) => {
 
 someFunction()
 
-// https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11
 
-
-// gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}
 
