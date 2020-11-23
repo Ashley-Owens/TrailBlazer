@@ -73,5 +73,3 @@ const calculateDifficulty = (trail) => {
     }
 )
 })();
-
-someFunction()
