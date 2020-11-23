@@ -4,34 +4,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const trailId = urlParams.get("id");
     const apiUrl = "https://www.hikingproject.com/data/get-trails-by-id";
-    axios
-      .get(`${apiUrl}`, {
-        params: {
-          ids: trailId,
-          key: "200972057-cecb24f98c06e7baf18a485d402ce097",
-        },
-      })
-      .then(({ data }) => {
-        const trail = data.trails[0];
-        const difficulty = calculateDifficulty(trail);
-        const badgeClasses = {
-          easy: "badge-success",
-          medium: "badge-warning",
-          hard: "badge-danger",
-        };
 
-        $("#name").text(`${trail.name}`);
-        $("#difficulty")
-          .text(`${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}`)
-          .addClass(`${badgeClasses[difficulty]}`);
-        $("#length").text(`${trail.length}`);
-        $("#lat").text(`${trail.latitude}`);
-        $("#long").text(`${trail.longitude}`);
-
-        $("#gear-link").attr(
-          "href",
-          `gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}`
-        );
 
         // let mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&"
         // mapLink = mapLink + "whatever";
