@@ -108,6 +108,7 @@
       fitnessLevel = fitnessLevel;
     }
 
+    // Change for code smell
     if (fitnessLevel == 0) {
       fitnessLevel = fitnessLevel + "  , Sorry, you are too young. :-(";
     } else if (fitnessLevel <= 4) {
