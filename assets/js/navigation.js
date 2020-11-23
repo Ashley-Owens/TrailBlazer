@@ -68,11 +68,13 @@ const calculateDifficulty = (trail) => {
 
                 $("#gear-link").attr("href", `gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}`)
 
-                let mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&"
-                mapLink = mapLink + "whatever";
+                // let mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&"
+                // mapLink = mapLink + "whatever";
 
                 // Tester link
-                mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11"
+                // mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11"
+                mapLink = "https://www.google.com/maps/"
+
 
                 $("#map").attr("src", mapLink);
                 $("#navigation-btn").attr("href", mapLink);
