@@ -1,28 +1,3 @@
-// Convert trail API difficulty into Trailblazer difficulty
-const calculateDifficulty = (trail) => {
-  let difficulty;
-
-  // convert the Hiking Project difficulty to a TrailBlazer difficulty
-  switch (trail.difficulty) {
-    case "green":
-      difficulty = "easy";
-      break;
-    case "greenBlue":
-    case "blue":
-      difficulty = "medium";
-      break;
-    case "blueBlack":
-    case "black":
-      difficulty = "hard";
-      break;
-    default:
-      difficulty = "hard";
-      break;
-  }
-
-  return difficulty;
-};
-
 // Call API to pull in the data from Trail ID, use that data on the HTML page
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
@@ -74,5 +49,3 @@ const calculateDifficulty = (trail) => {
       });
   });
 })();
-
-someFunction();
