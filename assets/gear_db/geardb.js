@@ -1,11 +1,11 @@
 var gearDb = [
     {
-      "Item": "Light - Weight Jacket",
+      "Item": "Light Jacket",
       "Temperature": 70,
       "Precipitation": "",
       "Elevation": "",
       "Distance": "",
-      "Wind": 10,
+      "Wind": "",
       "Amount": "",
       "Description": "A light weight protective option for low winds and cool conditions"
     },
@@ -25,7 +25,7 @@ var gearDb = [
       "Precipitation": "",
       "Elevation": "",
       "Distance": "",
-      "Wind": 10,
+      "Wind": "",
       "Amount": "",
       "Description": "Protects from the sun, wind, and other debris"
     },
@@ -67,7 +67,17 @@ var gearDb = [
       "Distance": "",
       "Wind": "",
       "Amount": 1,
-      "Description": "1 Liter per 5 miles"
+      "Description": "Consider bringing 1 liter of water per 10 miles"
+    },
+    {
+      "Item": "Lifestraw",
+      "Temperature": "",
+      "Precipitation": "",
+      "Elevation": "",
+      "Distance": "15",
+      "Wind": "",
+      "Amount": 1,
+      "Description": "This is a long hike, bringing a water purifier will help if you run out of water"
     },
     {
       "Item": "Trail Mix",
@@ -77,7 +87,7 @@ var gearDb = [
       "Distance": 5,
       "Wind": "",
       "Amount": "",
-      "Description": "Provides adequate energy during a 5 mile hike"
+      "Description": "Supplements your caloric burn past 5 miles"
     },
     {
       "Item": "Sun Block",
@@ -97,7 +107,7 @@ var gearDb = [
       "Distance": 3,
       "Wind": "",
       "Amount": "",
-      "Description": "Provides adequate energy for a 3 mile hike"
+      "Description": "Supplements your caloric burn past 3 miles"
     },
     {
       "Item": "Gel Shots",
@@ -107,17 +117,17 @@ var gearDb = [
       "Distance": 10,
       "Wind": "",
       "Amount": "",
-      "Description": "Provides adequate energy during a 10 mile hike"
+      "Description": "Supplements your caloric burn past 10 miles"
     },
     {
       "Item": "Fruit Leather",
       "Temperature": "",
       "Precipitation": "",
       "Elevation": "",
-      "Distance": 7,
+      "Distance": 15,
       "Wind": "",
       "Amount": "",
-      "Description": "Provides adequate"
+      "Description": "Supplements your caloric burn past 15 miles"
     },
     {
       "Item": "Sports Drink",
@@ -127,34 +137,24 @@ var gearDb = [
       "Distance": 10,
       "Wind": "",
       "Amount": "",
-      "Description": "Provides adequate hydration and energy during a 10 mile hike"
+      "Description": "Supplements your hydration and repleneshes your electrolytes past 10 miles"
     },
     {
-      "Item": "Small Backpack",
+      "Item": "Backpack",
       "Temperature": "",
       "Precipitation": "",
       "Elevation": "",
-      "Distance": 2,
+      "Distance": 5,
       "Wind": "",
       "Amount": "",
-      "Description": "A small pack for your short hike"
-    },
-    {
-      "Item": "Large Backpack",
-      "Temperature": "",
-      "Precipitation": "",
-      "Elevation": "",
-      "Distance": 6,
-      "Wind": "",
-      "Amount": "",
-      "Description": "Consider bringing a larger bag for your longer hike"
+      "Description": "A smaller backpack should be sufficient for this dayhike, condider a larger one for longer trails"
     },
     {
       "Item": "Flashlight",
       "Temperature": "",
       "Precipitation": "",
       "Elevation": "",
-      "Distance": 12,
+      "Distance": 10  ,
       "Wind": "",
       "Amount": "",
       "Description": "This hike is long, it may get dark, consider bringing a flashlight"
@@ -192,7 +192,7 @@ var gearDb = [
     {
       "Item": "Waterproof Jacket",
       "Temperature": "",
-      "Precipitation": 50,
+      "Precipitation": "Rain",
       "Elevation": "",
       "Distance": "",
       "Wind": "",
@@ -202,7 +202,7 @@ var gearDb = [
     {
       "Item": "Waterproof Pants",
       "Temperature": "",
-      "Precipitation": 100,
+      "Precipitation": "Rain",
       "Elevation": "",
       "Distance": "",
       "Wind": "",
@@ -232,7 +232,7 @@ var gearDb = [
     {
       "Item": "Snow Shoes",
       "Temperature": 30,
-      "Precipitation": "",
+      "Precipitation": "Snow",
       "Elevation": "",
       "Distance": "",
       "Wind": "",
@@ -241,7 +241,7 @@ var gearDb = [
     },
     {
       "Item": "Jogging Shoes",
-      "Temperature": 70,
+      "Temperature": "",
       "Precipitation": "",
       "Elevation": 1000,
       "Distance": "",
@@ -271,8 +271,8 @@ var gearDb = [
     },
     {
       "Item": "Snow Jacket",
-      "Temperature": 30,
-      "Precipitation": "",
+      "Temperature": "",
+      "Precipitation": "Snow",
       "Elevation": "",
       "Distance": "",
       "Wind": "",
@@ -284,7 +284,7 @@ var gearDb = [
       "Temperature": "",
       "Precipitation": "",
       "Elevation": "",
-      "Distance": 6,
+      "Distance": 5,
       "Wind": "",
       "Amount": "",
       "Description": "Bring an extra phone bank to get those sweet Insta shots!"
