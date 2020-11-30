@@ -74,7 +74,7 @@ var gearDb = [
       "Temperature": "",
       "Precipitation": "",
       "Elevation": "",
-      "Distance": "15",
+      "Distance": 15,
       "Wind": "",
       "Amount": 1,
       "Description": "This is a long hike, bringing a water purifier will help if you run out of water"
@@ -147,7 +147,7 @@ var gearDb = [
       "Distance": 5,
       "Wind": "",
       "Amount": "",
-      "Description": "A smaller backpack should be sufficient for this dayhike, condider a larger one for longer trails"
+      "Description": "A smaller backpack should be sufficient for this dayhike, consider a larger one for longer trails"
     },
     {
       "Item": "Flashlight",
