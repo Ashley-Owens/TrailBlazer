@@ -18,7 +18,7 @@ const updateWeather = (weatherData) => {
     $('.precip').text(parsedData.humidity)
     $('.wind').text(parsedData.windSpeed)
     $('.trail-elevation').text(elevation)
-    const gearList = gearLookupByTemp(parsedData.temperature)
+    const gearList = gearLookupByTemp(parsedData)
     renderGearList(gearList)
 }
 
@@ -29,13 +29,42 @@ const parseWeatherData = (weatherData) => ({
         "humidity": weatherData.main.humidity
 });
 
-const gearLookupByTemp = (temperature) => {
-    const recommendedGear = []
+const gearLookupByTemp = (hikeData) => {
+    var recommendedGear = []
     gearDb.forEach(item => {
-        if (temperature >= item.Temperature) {
+        if (hikeData.temperature >= item.Temperature && hikeData.temperature-item.Temperature < 10) {
             recommendedGear.push(item)
             console.log(item)
         }
+        if (hikeData.temperature <= item.Temperature && item.Temperature-hikeData.temperature < 10) {
+            recommendedGear.push(item)
+            console.log(item)
+        }
+        if (hikeData.weatherSummary == "Rain" || hikeData.weatherSummary == "Mist" && item.Precipitation == "Rain") {
+            recommendedGear.push(item)
+            console.log(item)
+        }
+        if (hikeData.windSpeed >= 10 && item.Wind >= 10) {
+            recommendedGear.push(item)
+            console.log(item)
+        }
+        if (elevation >= 2000 && item.Elevation == 2000){
+            recommendedGear.push(item)
+            console.log(item)
+        }
+        if (elevation < 2000 && item.Elevation == 1000){
+            recommendedGear.push(item)
+            console.log(item)
+        }
+        if (trailLength > item.Distance && item.Distance > 0){
+            recommendedGear.push(item)
+            console.log(item)
+        } 
+        if (item.Item == "Water"){
+            recommendedGear.push(item)
+            console.log(item)
+        }
+
     })
     return recommendedGear;
 }
@@ -43,7 +72,7 @@ const gearLookupByTemp = (temperature) => {
 const renderGearList = (recommendedGear) => {
     $('.weather-table-body').empty()
     recommendedGear.forEach(item => {
-        $('.weather-table-body').append("<tr><td>" + item.Item + "</td></tr>")
+        $('.weather-table-body').append("<tr><td>" + item.Item + " - " + item.Description ,"</td></tr>")
     })
 }
 

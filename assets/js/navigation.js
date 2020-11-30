@@ -30,7 +30,7 @@
 
         $("#gear-link").attr(
           "href",
-          `gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}`
+          `gear.html?name=${trail.name}&lat=${trail.latitude}&long=${trail.longitude}&length=${trail.length}&elev=${trail.ascent}`
         );
 
 
