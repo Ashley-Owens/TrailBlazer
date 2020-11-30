@@ -33,16 +33,25 @@
           `gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}`
         );
 
-        // let mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&"
-        // mapLink = mapLink + "whatever";
 
-        // Tester link --> in the works
-        // mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11"
+        // Example Link
+        // let mapLink = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&q=Space+Needle,Seattle+WA"
 
-        // https://www.google.com/maps/embed/v1/place?key=AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM&amp;q=Corvallis%2C+Oregon&amp;zoom=11
-        // gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}
+        // Google Maps Embeded Link
+        let mapLink = "https://www.google.com/maps/embed/v1/place?key="
+        let googleKey = "AIzaSyCgtovObBinNeIENCPvxfNV2cU2OyAcUoM" + "&q="
+        let latCoordinates = trail.latitude
+        let longCoordinates = trail.longitude
+        mapLink = mapLink + googleKey + latCoordinates + "," + longCoordinates
 
-        mapLink = "https://www.google.com/maps/";
+        // Google Maps Normal Link
+        let mapLink2 = "https://www.google.com/maps/dir//"
+        mapLink2 = mapLink2 + latCoordinates + "," + longCoordinates + "/@16z?hl=en-US"
+
+        $("#navigate-btn").attr(
+          "href",
+          mapLink2
+        );
 
         $("#map").attr("src", mapLink);
         $("#navigation-btn").attr("href", mapLink);
