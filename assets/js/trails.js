@@ -77,7 +77,7 @@ const createListCard = (trail) => {
   const gear = $(`<div class="d-flex justify-content-between card-text pt-3">
                       <span>
                           <i class="fas fa-tshirt mr-2" style="color: #7d8285"></i>
-                          <a href="gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}">Gear &amp; clothing</a>
+                          <a href="gear.html?name=${trail.name}&lat=${trail.latitude}&long=${trail.longitude}&length=${trail.length}&elev=${trail.ascent}">Gear &amp; clothing</a>
                       </span>
                   </div>`);
 
@@ -148,7 +148,7 @@ const createGridCard = (trail) => {
   const gear = $(`<div class="d-flex justify-content-between card-text pt-3">
                               <span style="font-size: 0.9rem">
                                   <i class="fas fa-tshirt mr-2" style="color: #7d8285"></i>
-                                  <a href="gear.html?name=${trail.name}&id=${trail.id}&length=${trail.length}">Gear &amp; clothing</a>
+                                  <a href="gear.html?name=${trail.name}&lat=${trail.latitude}&long=${trail.longitude}&length=${trail.length}&elev=${trail.ascent}">Gear &amp; clothing</a>
                               </span>
                           </div>`);
 

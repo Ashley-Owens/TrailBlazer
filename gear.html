@@ -66,7 +66,7 @@
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
               <h2 class="display-5">
-                Condition Status:
+                Trail Weather:
                 <span class="condition-status">Loading...</span>
               </h2>
               <p></p>
@@ -77,10 +77,10 @@
                       <th>Gear</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="weather-table-body">
                     <tr></tr>
                     <tr>
-                      <td>Light-weight jacket shell - protection from wind gusts</td>
+                      <td><span class="gear">Loading...</span>Light-weight jacket shell - protection from wind gusts</td>
                     </tr>
                     <tr>
                       <td>Hat / Cap - protect face from sunburn</td>
@@ -108,8 +108,7 @@
           <div class="col-lg-6 order-lg-2">
             <div class="p-5">
               <h2 class="display-5">
-                Terrain:&nbsp;<i class="fas fa-mountain"></i>&nbsp;2,350
-                ft&nbsp;&nbsp;&nbsp;<i class="fas fa-walking"></i>&nbsp;Rocky
+                Precipitation & Wind: <span class="precip">Loading...</span> | <span class="wind">Loading...</span>
               </h2>
               <p></p>
               <div class="table-responsive">
@@ -147,7 +146,7 @@
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
               <h2 class="display-5">
-                Hiking Distance: <span class="estimated-time">Loading...</span>
+                Hiking Distance & Elevation: <span class="estimated-time">Loading...</span> | <span class="trail-elevation">Loading...</span>
               </h2>
               <p></p>
               <div class="table-responsive">
@@ -195,6 +194,7 @@
       <p class="text-center text-white m-0 small"></p>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/gear_db/geardb.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
